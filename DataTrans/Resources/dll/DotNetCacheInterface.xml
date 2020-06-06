@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotNetCacheInterface</name>
+    </assembly>
+    <members>
+        <member name="T:DotNetCacheInterface.ClassOperation">
+            <summary>
+            Cache数据库类文件操作类
+            </summary>
+        </member>
+        <member name="P:DotNetCacheInterface.ClassOperation.Host">
+            <summary>
+            主机地址
+            </summary>
+        </member>
+        <member name="P:DotNetCacheInterface.ClassOperation.Port">
+            <summary>
+            端口号
+            </summary>
+        </member>
+        <member name="P:DotNetCacheInterface.ClassOperation.Namespace">
+            <summary>
+            命名空间
+            </summary>
+        </member>
+        <member name="F:DotNetCacheInterface.ClassOperation.UserID">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="F:DotNetCacheInterface.ClassOperation.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="M:DotNetCacheInterface.ClassOperation.Login(System.String,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            类操作前需要先登录数据库
+            登录成功返回:Login Cache OK
+            登录失败返回:Login Cache Fail:[错误信息]
+            </summary>
+            <param name="Host">主机地址</param>
+            <param name="Port">端口号</param>
+            <param name="Namespace">命名空间</param>
+            <param name="UserID">用户名</param>
+            <param name="Password">密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetCacheInterface.ClassOperation.RunClassMethod(System.String,System.String,System.Object[])">
+            <summary>
+            运行ClassMethod类方法
+            </summary>
+            登录成功返回:类方法返回值
+            登录失败返回:Run ClassMethod Fail:[错误信息]
+            <param name="ClassName">类名</param>
+            <param name="FuncName">方法名</param>
+            <param name="args">参数</param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:DotNetCacheInterface.ClassOperation.RunQuery(System.Object[])" -->
+        <member name="T:DotNetCacheInterface.SQLOperation">
+            <summary>
+            Cache数据库SQL操作类
+            </summary>
+        </member>
+        <member name="M:DotNetCacheInterface.SQLOperation.Login(System.String,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            SQL操作前需要先登录数据库
+            登录成功返回:Login Cache OK
+            登录失败返回:Login Cache Fail:[错误信息]
+            </summary>
+            <param name="Host">主机地址</param>
+            <param name="Port">端口号</param>
+            <param name="Namespace">命名空间</param>
+            <param name="UserID">用户名</param>
+            <param name="Password">密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetCacheInterface.SQLOperation.Select(System.String)">
+            <summary>
+            查找数据，成功返回DataTable数据表，失败返回null
+            </summary>
+            <param name="sqlStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetCacheInterface.SQLOperation.Insert(System.String)">
+            <summary>
+            插入数据，成功返回成功执行的行数
+            </summary>
+            <param name="sqlStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotNetCacheInterface.SQLOperation.Update(System.String)">
+            <summary>
+            更新数据，成功返回成功执行的行数
+            </summary>
+            <param name="sqlStr"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
